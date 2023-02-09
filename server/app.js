@@ -14,5 +14,5 @@ app.use(cors({ origin: "*" }))
 app.listen(port, () => {
     console.log(`listening ${port}`)
 
-    connect().then(() => sequelize.sync()).catch((e) => console.log(e))
+    connect().then(() => sequelize.sync({force: true})).catch((e) => console.log(e))
 })
