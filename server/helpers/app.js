@@ -1,7 +1,7 @@
-const { pong } = require("../controllers/app")
+const authRouter = require("../routes/auth")
 
 const configureRouter = (app) => {
-    app.use('/' , pong)
+    app.use('/auth' , authRouter)
 }
 
 module.exports = configureRouter
